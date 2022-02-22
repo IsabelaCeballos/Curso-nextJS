@@ -9,13 +9,15 @@ export default function Users( {users} ){
             <div className="grid">
                 {users.map((value)=>{
                     return(
+                        <>{/*
                         <Link href={'/users/[id]'} as={`/users/${value.id}`} key={value.id}>
                             <a className="card">
                                 <h3>User</h3>
                                 <p>Name: {value.name}</p>
                                 <p>Email: {value.email}</p>
                             </a>
-                        </Link>
+                        </Link>*/}
+                        </>
                     );
                 })}
             </div>
