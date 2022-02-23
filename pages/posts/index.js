@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import Title from "../../components/title";
+import Head from 'next/head';
 
 export default function Posts( {posts} ){
     //Client side rendering
@@ -18,6 +19,10 @@ export default function Posts( {posts} ){
 
     return(
         <Layout>
+            <Head>
+                <title>Aprendamos NextJS</title>
+                <meta name='description' content='En este curso aprenderás sobre NextJS'/>
+            </Head>
             <Title>Posts Page</Title>
             <div className="grid">
                 {posts.map((value)=>{

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../../components/layout";
 import Title from "../../components/title";
 
@@ -5,6 +6,10 @@ export default function post( {posts} ){
     
     return(
         <Layout>
+            <Head>
+                <title>Post #{posts.id}</title>
+                <meta name='description' content='En este curso aprenderás sobre NextJS'/>
+            </Head>
             <Title>Post Details</Title>
             <div className="card">
                 <h2>{posts.title}</h2>

@@ -1,9 +1,12 @@
 import Navbar from "./navbar";
+import { useState } from "react";
 
 export default function Layout({children}){
+    const [counter, setCounter] = useState(0);
     return(
         <div>
             <Navbar />
+            <h1 onClick={()=> setCounter(counter +1)}>{counter}</h1>
             <main>
                 {children}
             </main>

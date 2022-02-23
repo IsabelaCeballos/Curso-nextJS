@@ -1,10 +1,15 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
 import Title from "../../components/title";
+import Head from "next/head";
 
 export default function Users( {users} ){
     return(
         <Layout>
+            <Head>
+                <title>Aprendamos NextJS</title>
+                <meta name='description' content='En este curso aprenderás sobre NextJS'/>
+            </Head>
             <Title>Users Page</Title>
             <div className="grid">
                 {users.map((value)=>{
